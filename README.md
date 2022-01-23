@@ -6,6 +6,8 @@ The R package `sparsediscrim` provides a collection of sparse and regularized di
 analysis classifiers that are especially useful for when applied to
 small-sample, high-dimensional data sets.
 
+This fork makes one trivial change. Currently, predictions on models with updated priors require a full retraining of the algorithm just to pass the priors to the predict method. This fork will allow a direct update to the priors in the predict method to prevent the added overhead of refitting in a production environment, like the one I will be deploying in https://github.com/J0vid/FB2_HPO_classification.
+
 ## Installation
 
 You can install the stable version on [CRAN](https://cran.r-project.org/package=sparsediscrim):
